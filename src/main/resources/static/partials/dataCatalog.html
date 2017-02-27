@@ -1,0 +1,13 @@
+<div class="demo-collapsible-pane-header">Available Datasources</div>
+<div class="demo-collapsible-pane-content" ng-controller="DataCatalogController" id="dataCatalog">
+    <table>
+        <tr>
+            <th width="30%" align="left">Name</th>
+            <th width="70%" align="left">Description</th>
+        </tr>
+        <tr ng-repeat="datasource in dataCatalog.availableDataSources">
+            <td width="30%"><a href="#" ng-click="changeDatasource(datasource.id);">{{datasource.shortName}}</a></td>
+            <td width="70%">{{datasource.longName}}</td>
+        </tr>
+    </table>
+</div>

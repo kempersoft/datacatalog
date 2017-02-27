@@ -1,0 +1,34 @@
+<div>
+    <h1>Datasource Details</h1>
+    <br><br><br>
+    Short Name : {{detailspane.datasource.shortName}}<br>
+    Long Name : {{detailspane.datasource.longName}}<br>
+    Description : {{detailspane.datasource.description}}<br>
+    Type : {{detailspane.datasource.type}}<br>
+    Created Date : {{detailspane.datasource.createdDate | date:'medium'}}<br>
+    Created By : {{detailspane.datasource.createdBy}}<br>
+    <br>
+    <b>Tags</b><br>
+    <table>
+        <thead>
+        <tr>
+            <th width="40%">Label</th>
+            <th width="60%">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="tag in detailspane.datasource.tags">
+            <td width="40%">{{tag.label}}</a></td>
+            <td width="60%">{{tag.description}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form ng-submit="updateDatasource()">
+        <input type="text" id="shortName" ng-model="detailspane.datasource.shortName">Short Name<br/>
+        <input type="text" id="name" ng-model="detailspane.datasource.longName">Long Name<br/>
+        <input type="submit" value="Submit Form">
+
+    </form>
+</div>
+
